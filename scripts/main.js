@@ -10,3 +10,20 @@ class teamMember {
         this.role = role;
         this.image = image;
     }
+
+    // Method to return cards
+    get cardCreator() {
+        const self = this;
+        
+        const cardTextContainer = document.createElement('div');
+        cardTextContainer.innerHTML = `<span>${self.name}</span> <b>${self.role}</b>`;
+
+        const cardImageContainer = document.createElement('div');
+        cardImageContainer.innerHTML = `<img src="images/${self.image}" alt="${self.name}">`;
+        
+        const card = document.createElement('li');
+        card.append(cardImageContainer);
+        card.append(cardTextContainer);
+        return card;
+    }
+}
