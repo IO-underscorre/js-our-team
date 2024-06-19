@@ -27,3 +27,11 @@ class teamMember {
         return card;
     }
 }
+
+const cardsContainer = document.querySelector('.cards-container');
+
+for (let i = 0 ; i < teamMembersNames.length ; i++) {
+    const employ = new teamMember (teamMembersNames[i] , teamMembersRoles[i] , teamMembersImages[i]);
+    
+    cardsContainer.append(employ.cardCreator);
+}
